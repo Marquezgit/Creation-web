@@ -1,77 +1,121 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
+
 <meta charset="UTF-8">
-<title>Páginas Web para Negocios | Gustavo Márquez</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PixelForge | Diseño de Páginas Web</title>
 
 <style>
 
 body{
-font-family: Arial;
+font-family: Arial, sans-serif;
 margin:0;
 background:#f4f4f4;
 }
 
+/* HEADER */
+
 header{
-background:#111;
+background:#0f172a;
 color:white;
 padding:20px;
-text-align:center;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:22px;
+font-weight:bold;
 }
 
 nav a{
 color:white;
-margin:15px;
+margin:10px;
 text-decoration:none;
 font-weight:bold;
 }
 
+/* HERO */
+
 .hero{
 text-align:center;
-padding:60px;
-background:#0077ff;
+padding:80px 20px;
+background:linear-gradient(135deg,#2563eb,#1e40af);
 color:white;
 }
 
 .hero h1{
-font-size:40px;
+font-size:42px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:20px;
 }
 
 .btn{
 background:#25D366;
-color:white;
 padding:15px 25px;
+color:white;
 text-decoration:none;
+border-radius:6px;
 font-size:18px;
-border-radius:5px;
+display:inline-block;
+margin-top:20px;
 }
 
+/* SECTIONS */
+
 .section{
-padding:40px;
+padding:60px 20px;
 text-align:center;
 }
 
 .cards{
 display:flex;
+flex-wrap:wrap;
 justify-content:center;
 gap:20px;
-flex-wrap:wrap;
+margin-top:30px;
 }
 
 .card{
 background:white;
-padding:20px;
-width:250px;
+padding:25px;
+width:260px;
 border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.2);
+box-shadow:0 0 10px rgba(0,0,0,0.15);
 }
 
+/* FOOTER */
+
 footer{
-background:#111;
+background:#0f172a;
 color:white;
 text-align:center;
-padding:20px;
+padding:25px;
+margin-top:40px;
+}
+
+/* WHATSAPP FLOAT */
+
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+font-size:28px;
+padding:15px 18px;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 0 10px rgba(0,0,0,0.3);
 }
 
 </style>
@@ -82,25 +126,36 @@ padding:20px;
 
 <header>
 
-<h2>Creación de Páginas Web - Gustavo Márquez</h2>
+<div class="logo">
+
+<!-- LOGO SVG -->
+<svg width="35" height="35" viewBox="0 0 24 24" fill="#38bdf8">
+<path d="M12 2L2 7l10 5 10-5-10-5zm0 7L2 4v13l10 5 10-5V4l-10 5z"/>
+</svg>
+
+PixelForge
+
+</div>
 
 <nav>
+
 <a href="#">Inicio</a>
 <a href="#">Servicios</a>
 <a href="#">Precios</a>
 <a href="#">Contacto</a>
+
 </nav>
 
 </header>
 
 <section class="hero">
 
-<h1>Tu negocio necesita una página web</h1>
+<h1>Páginas web que hacen crecer tu negocio</h1>
 
-<p>Diseño páginas web profesionales para negocios y emprendedores.</p>
+<p>Diseño profesional de sitios web para emprendedores y negocios.</p>
 
 <a class="btn" href="https://wa.me/528719593901">
-Escríbeme por WhatsApp
+Contactar por WhatsApp
 </a>
 
 </section>
@@ -113,19 +168,18 @@ Escríbeme por WhatsApp
 
 <div class="card">
 <h3>Página Básica</h3>
-<p>Perfecta para pequeños negocios.</p>
-<p>Incluye contacto y botón de WhatsApp.</p>
+<p>Perfecta para negocios pequeños.</p>
+<p>Incluye botón de WhatsApp y contacto.</p>
 </div>
 
 <div class="card">
 <h3>Página Profesional</h3>
-<p>Diseño moderno y optimizado.</p>
-<p>Ideal para promocionar servicios.</p>
+<p>Diseño moderno optimizado para atraer clientes.</p>
 </div>
 
 <div class="card">
 <h3>Landing de Ventas</h3>
-<p>Páginas diseñadas para vender productos o servicios.</p>
+<p>Páginas diseñadas específicamente para vender.</p>
 </div>
 
 </div>
@@ -134,10 +188,10 @@ Escríbeme por WhatsApp
 
 <section class="section">
 
-<h2>Beneficios de tener página web</h2>
+<h2>¿Por qué tener página web?</h2>
 
 <p>✔ Más clientes</p>
-<p>✔ Más visibilidad</p>
+<p>✔ Más presencia en internet</p>
 <p>✔ Más confianza para tu negocio</p>
 
 </section>
@@ -167,25 +221,18 @@ Escríbeme por WhatsApp
 
 </section>
 
-<section class="section">
-
-<h2>Contacto</h2>
-
-<p>Nombre: Gustavo Márquez</p>
-<p>WhatsApp: 871 959 3901</p>
-
-<a class="btn" href="https://wa.me/528719593901">
-Enviar mensaje
-</a>
-
-</section>
-
 <footer>
 
-<p>© 2026 Gustavo Márquez | Diseño de páginas web</p>
+<p>PixelForge | Diseño de páginas web</p>
+<p>WhatsApp: 871 959 3901</p>
 
 </footer>
 
-</body>
+<!-- BOTÓN FLOTANTE -->
 
+<a class="whatsapp" href="https://wa.me/528719593901">
+💬
+</a>
+
+</body>
 </html>
