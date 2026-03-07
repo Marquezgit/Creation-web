@@ -9,17 +9,21 @@
 
 <style>
 
-/* FONDO TECNOLOGICO */
-
 body{
-font-family: Arial, sans-serif;
 margin:0;
+font-family:Arial;
 color:white;
-background:
-radial-gradient(circle at 20% 20%, #1e3a8a, transparent 40%),
-radial-gradient(circle at 80% 30%, #2563eb, transparent 40%),
-radial-gradient(circle at 50% 80%, #0ea5e9, transparent 40%),
-#020617;
+background:#020617;
+overflow-x:hidden;
+}
+
+/* PARTICULAS */
+
+canvas{
+position:fixed;
+top:0;
+left:0;
+z-index:-1;
 }
 
 /* HEADER */
@@ -41,15 +45,6 @@ font-size:22px;
 font-weight:bold;
 }
 
-/* LOGO MONITOR */
-
-.logo svg{
-width:40px;
-height:40px;
-}
-
-/* MENU */
-
 nav a{
 color:white;
 margin-left:20px;
@@ -57,19 +52,23 @@ text-decoration:none;
 font-weight:bold;
 }
 
-nav a:hover{
-color:#38bdf8;
-}
-
 /* HERO */
 
 .hero{
+height:80vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
-padding:100px 20px;
+padding:20px;
+
+background:
+linear-gradient(180deg,rgba(2,6,23,0.8),rgba(2,6,23,1));
 }
 
 .hero h1{
-font-size:48px;
+font-size:52px;
 margin-bottom:10px;
 }
 
@@ -79,27 +78,34 @@ color:#cbd5f5;
 }
 
 .btn{
-display:inline-block;
 margin-top:25px;
 background:#22c55e;
-padding:15px 28px;
+padding:16px 30px;
 border-radius:8px;
 text-decoration:none;
 color:white;
 font-weight:bold;
 }
 
-/* SECCIONES */
+/* SECTIONS */
 
 .section{
-padding:70px 20px;
+padding:80px 20px;
 text-align:center;
+opacity:0;
+transform:translateY(40px);
+transition:all 1s;
+}
+
+.section.show{
+opacity:1;
+transform:translateY(0);
 }
 
 .cards{
 display:flex;
-justify-content:center;
 flex-wrap:wrap;
+justify-content:center;
 gap:25px;
 margin-top:30px;
 }
@@ -123,7 +129,6 @@ footer{
 text-align:center;
 padding:40px;
 background:rgba(0,0,0,0.4);
-margin-top:50px;
 }
 
 /* WHATSAPP */
@@ -147,16 +152,15 @@ box-shadow:0 0 15px rgba(0,0,0,0.4);
 
 <body>
 
+<canvas id="particles"></canvas>
+
 <header>
 
 <div class="logo">
 
-<!-- LOGO MONITOR -->
-
-<svg viewBox="0 0 24 24" fill="#38bdf8">
-<path d="M3 4h18v12H3z"/>
-<path d="M8 20h8v-2H8z"/>
-<text x="6" y="13" font-size="6" fill="black">&lt;/&gt;</text>
+<svg width="40" height="40" viewBox="0 0 24 24" fill="#38bdf8">
+<rect x="3" y="4" width="18" height="12"/>
+<rect x="8" y="18" width="8" height="2"/>
 </svg>
 
 PixelForge
@@ -164,21 +168,19 @@ PixelForge
 </div>
 
 <nav>
-
 <a href="#">Inicio</a>
 <a href="#">Servicios</a>
 <a href="#">Precios</a>
 <a href="#">Contacto</a>
-
 </nav>
 
 </header>
 
 <section class="hero">
 
-<h1>Diseño de páginas web para negocios</h1>
+<h1>Diseño de páginas web que impulsan negocios</h1>
 
-<p>Haz que tu negocio tenga presencia profesional en internet</p>
+<p>Desarrollamos sitios web modernos para emprendedores y empresas.</p>
 
 <a class="btn" href="https://wa.me/528719593901">
 Contactar por WhatsApp
@@ -194,17 +196,17 @@ Contactar por WhatsApp
 
 <div class="card">
 <h3>Página Básica</h3>
-<p>Perfecta para pequeños negocios.</p>
+<p>Ideal para negocios que necesitan presencia en internet.</p>
 </div>
 
 <div class="card">
 <h3>Página Profesional</h3>
-<p>Diseño moderno optimizado para atraer clientes.</p>
+<p>Diseño optimizado para atraer más clientes.</p>
 </div>
 
 <div class="card">
 <h3>Landing de Ventas</h3>
-<p>Páginas diseñadas para vender productos o servicios.</p>
+<p>Páginas creadas para vender productos o servicios.</p>
 </div>
 
 </div>
@@ -243,9 +245,71 @@ Contactar por WhatsApp
 
 </footer>
 
-<a class="whatsapp" href="https://wa.me/528719593901">
-💬
-</a>
+<a class="whatsapp" href="https://wa.me/528719593901">💬</a>
+
+<script>
+
+/* PARTICULAS TECNOLOGICAS */
+
+const canvas=document.getElementById("particles");
+const ctx=canvas.getContext("2d");
+
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+let particles=[];
+
+for(let i=0;i<80;i++){
+particles.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+size:Math.random()*2,
+speedX:Math.random()*0.5,
+speedY:Math.random()*0.5
+});
+}
+
+function animate(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+particles.forEach(p=>{
+ctx.fillStyle="#38bdf8";
+ctx.beginPath();
+ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
+ctx.fill();
+
+p.x+=p.speedX;
+p.y+=p.speedY;
+
+if(p.x>canvas.width)p.x=0;
+if(p.y>canvas.height)p.y=0;
+
+});
+
+requestAnimationFrame(animate);
+}
+
+animate();
+
+/* ANIMACION SCROLL */
+
+const sections=document.querySelectorAll(".section");
+
+window.addEventListener("scroll",()=>{
+
+sections.forEach(sec=>{
+const top=sec.getBoundingClientRect().top;
+
+if(top<window.innerHeight-100){
+sec.classList.add("show");
+}
+
+});
+
+});
+
+</script>
 
 </body>
 </html>
