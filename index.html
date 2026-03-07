@@ -1,29 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Pixel Forge</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
-
-<link rel="icon" href="pixel-forge-logo.png">
+<title>Pixel Forge - Desarrollo Digital</title>
 
 <style>
 
 body{
 margin:0;
-font-family:'Orbitron', sans-serif;
-background:#0a0a0a;
+font-family:Arial, Helvetica, sans-serif;
+background:#0f0f0f;
 color:white;
 text-align:center;
 }
 
 header{
-background:#111;
+background:#000;
 padding:20px;
 }
 
@@ -31,15 +24,14 @@ nav a{
 color:white;
 margin:15px;
 text-decoration:none;
-font-size:16px;
+font-size:18px;
 }
 
 nav a:hover{
-color:#00fff7;
+color:#00e5ff;
 }
 
 .logo{
-width:220px;
 margin-top:20px;
 }
 
@@ -48,38 +40,51 @@ padding:60px 20px;
 }
 
 .hero h1{
-font-size:42px;
-color:#00fff7;
-}
-
-.hero p{
-font-size:18px;
-margin-top:10px;
-}
-
-.btn{
-display:inline-block;
-margin-top:30px;
-padding:15px 30px;
-background:#00fff7;
-color:black;
-text-decoration:none;
-font-weight:bold;
-border-radius:5px;
+font-size:40px;
+color:#00e5ff;
 }
 
 .section{
-padding:60px 20px;
+padding:50px 20px;
+}
+
+.servicios{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.card{
+background:#1c1c1c;
+padding:20px;
+width:250px;
+border-radius:10px;
+}
+
+.precio{
+font-size:30px;
+color:#00e5ff;
+}
+
+.boton{
+background:#00e5ff;
+color:black;
+padding:12px 20px;
+text-decoration:none;
+border-radius:8px;
+display:inline-block;
+margin-top:10px;
+font-weight:bold;
 }
 
 footer{
-background:#111;
+background:#000;
 padding:20px;
-font-size:14px;
+margin-top:40px;
 }
 
 </style>
-
 </head>
 
 <body>
@@ -88,64 +93,105 @@ font-size:14px;
 
 <nav>
 <a href="#">Inicio</a>
-<a href="#servicios">Servicios</a>
-<a href="#precios">Precios</a>
-<a href="#contacto">Contacto</a>
+<a href="#">Servicios</a>
+<a href="#">Precios</a>
+<a href="#">Contacto</a>
 </nav>
+
+<div class="logo">
+<img src="pixelforge-logo.png" width="200">
+</div>
 
 </header>
 
-
 <section class="hero">
-
-<img src="pfile_00000000ce4c720cb84857f3d061f616.png" class="logo">
 
 <h1>Pixel Forge</h1>
 
-<p>Desarrollo web moderno y futurista</p>
+<p>
+Desarrollo digital, páginas web modernas, automatización con inteligencia artificial
+y soluciones tecnológicas para negocios.
+</p>
 
-<a class="btn" href="#contacto">Solicitar Página</a>
+<a class="boton" href="https://wa.me/528719593901">Contactar por WhatsApp</a>
 
 </section>
 
-
-<section id="servicios" class="section">
+<section class="section">
 
 <h2>Servicios</h2>
 
-<p>✔ Creación de páginas web</p>
-<p>✔ Landing pages para negocios</p>
-<p>✔ Optimización SEO</p>
-<p>✔ Diseño moderno y responsive</p>
+<div class="servicios">
+
+<div class="card">
+<h3>Páginas Web</h3>
+<p>Diseño de páginas web modernas para negocios, emprendedores y marcas personales.</p>
+</div>
+
+<div class="card">
+<h3>Automatización con IA</h3>
+<p>Implementación de herramientas de inteligencia artificial para mejorar procesos.</p>
+</div>
+
+<div class="card">
+<h3>Landing Pages</h3>
+<p>Páginas enfocadas en ventas para promocionar productos o servicios.</p>
+</div>
+
+<div class="card">
+<h3>Soporte Digital</h3>
+<p>Optimización y mantenimiento de páginas web.</p>
+</div>
+
+</div>
 
 </section>
 
-
-<section id="precios" class="section">
+<section class="section">
 
 <h2>Precios</h2>
 
-<p>Página básica: $1500 MXN</p>
-<p>Página profesional: $3000 MXN</p>
-<p>Tienda online: $5000 MXN</p>
+<div class="servicios">
+
+<div class="card">
+<h3>Landing Page</h3>
+<p class="precio">$1,500 MXN</p>
+<p>Página sencilla para promoción de servicios o productos.</p>
+</div>
+
+<div class="card">
+<h3>Página Web Completa</h3>
+<p class="precio">$3,500 MXN</p>
+<p>Sitio web profesional con varias secciones.</p>
+</div>
+
+<div class="card">
+<h3>Tienda Online</h3>
+<p class="precio">$6,000 MXN</p>
+<p>Venta de productos en internet con sistema de pagos.</p>
+</div>
+
+</div>
 
 </section>
 
-
-<section id="contacto" class="section">
+<section class="section">
 
 <h2>Contacto</h2>
 
-<p>Solicita tu página web por WhatsApp</p>
+<p>
+Escríbeme para desarrollar tu proyecto digital.
+</p>
 
-<a class="btn" href="https://wa.me/528719593901">Enviar WhatsApp</a>
+<a class="boton" href="https://wa.me/528719593901">
+Enviar WhatsApp
+</a>
 
 </section>
 
-
 <footer>
 
-<p>© 2026 Pixel Forge</p>
+<p>© 2026 Pixel Forge - Desarrollo Digital</p>
 
 </footer>
 
