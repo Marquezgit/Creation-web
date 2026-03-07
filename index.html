@@ -3,96 +3,79 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PixelForge Studio | Diseño Web</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+<title>Pixel Forge</title>
+
+<!-- FUENTE ORBITRON -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- ICONO DE LA PÁGINA -->
+<link rel="icon" href="logo.png">
 
 <style>
 
 body{
 margin:0;
-font-family:'Exo 2', sans-serif;
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+font-family:'Orbitron', sans-serif;
+background:#0a0a0a;
 color:white;
+text-align:center;
 }
-
-/* HEADER */
 
 header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 60px;
-background:rgba(0,0,0,0.65);
-backdrop-filter: blur(8px);
-}
-
-.logo{
-font-family:'Orbitron', sans-serif;
-font-size:28px;
-letter-spacing:2px;
+background:#111;
+padding:20px;
 }
 
 nav a{
-margin-left:25px;
-text-decoration:none;
 color:white;
-font-weight:500;
-transition:0.3s;
+margin:15px;
+text-decoration:none;
+font-size:16px;
 }
 
 nav a:hover{
-color:#00c6ff;
+color:#00fff7;
 }
 
-/* HERO */
+.logo{
+width:120px;
+margin-bottom:10px;
+}
 
 .hero{
-text-align:center;
-padding:140px 20px;
-max-width:900px;
-margin:auto;
+padding:80px 20px;
 }
 
 .hero h1{
-font-family:'Orbitron', sans-serif;
-font-size:50px;
-margin-bottom:20px;
+font-size:40px;
+color:#00fff7;
 }
 
 .hero p{
-font-size:20px;
-opacity:0.9;
+font-size:18px;
+margin-top:10px;
 }
 
-/* BOTON */
-
-.cta{
-margin-top:40px;
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 30px;
+background:#00fff7;
+color:black;
+text-decoration:none;
+font-weight:bold;
+border-radius:5px;
 }
 
-button{
-padding:16px 30px;
-border:none;
-background:linear-gradient(90deg,#00c6ff,#0072ff);
-color:white;
-font-size:16px;
-border-radius:8px;
-cursor:pointer;
-transition:0.3s;
+.section{
+padding:60px 20px;
 }
-
-button:hover{
-transform:scale(1.05);
-}
-
-/* FOOTER */
 
 footer{
-text-align:center;
-padding:30px;
-background:rgba(0,0,0,0.6);
-margin-top:120px;
+background:#111;
+padding:20px;
+font-size:14px;
 }
 
 </style>
@@ -102,38 +85,68 @@ margin-top:120px;
 
 <header>
 
-<div class="logo">PixelForge</div>
+<img src="logo.png" class="logo">
+
+<h2>Pixel Forge</h2>
 
 <nav>
-<a href="index.html">Inicio</a>
-<a href="servicios.html">Servicios</a>
-<a href="precios.html">Precios</a>
-<a href="contacto.html">Contacto</a>
+<a href="#">Inicio</a>
+<a href="#servicios">Servicios</a>
+<a href="#precios">Precios</a>
+<a href="#contacto">Contacto</a>
 </nav>
 
 </header>
 
+
 <section class="hero">
 
-<h1>Diseño Web Profesional</h1>
+<h1>Desarrollo Web Futurista</h1>
 
-<p>
-Creamos páginas web modernas, rápidas y optimizadas para negocios,
-emprendedores y marcas que quieren destacar en internet.
-</p>
+<p>Creación de páginas web modernas, rápidas y optimizadas.</p>
 
-<div class="cta">
-<a href="contacto.html">
-<button>Solicitar Página Web</button>
-</a>
-</div>
+<a class="btn" href="#contacto">Solicitar Página</a>
 
 </section>
 
+
+<section id="servicios" class="section">
+
+<h2>Servicios</h2>
+
+<p>✔ Creación de páginas web</p>
+<p>✔ Landing pages para negocios</p>
+<p>✔ Optimización SEO</p>
+<p>✔ Diseño moderno y responsive</p>
+
+</section>
+
+
+<section id="precios" class="section">
+
+<h2>Precios</h2>
+
+<p>Página básica: $1,500 MXN</p>
+<p>Página profesional: $3,000 MXN</p>
+<p>Tienda online: $5,000 MXN</p>
+
+</section>
+
+
+<section id="contacto" class="section">
+
+<h2>Contacto</h2>
+
+<p>Solicita tu página web por WhatsApp</p>
+
+<a class="btn" href="https://wa.me/528719593901">Enviar WhatsApp</a>
+
+</section>
+
+
 <footer>
 
-PixelForge Studio © 2026  
-Diseño web moderno para negocios digitales
+<p>© 2026 Pixel Forge - Desarrollo Web</p>
 
 </footer>
 
