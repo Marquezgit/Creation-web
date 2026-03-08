@@ -45,7 +45,7 @@ color:#00e5ff;
 }
 
 .section{
-padding:50px 20px;
+padding:60px 20px;
 }
 
 .servicios{
@@ -57,14 +57,16 @@ gap:20px;
 
 .card{
 background:#1c1c1c;
-padding:20px;
-width:250px;
+padding:25px;
+width:260px;
 border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.5);
 }
 
 .precio{
 font-size:30px;
 color:#00e5ff;
+margin:10px 0;
 }
 
 .boton{
@@ -76,6 +78,14 @@ border-radius:8px;
 display:inline-block;
 margin-top:10px;
 font-weight:bold;
+}
+
+.redes a{
+display:block;
+margin:10px;
+color:#00e5ff;
+text-decoration:none;
+font-size:18px;
 }
 
 footer{
@@ -92,10 +102,10 @@ margin-top:40px;
 <header>
 
 <nav>
-<a href="#">Inicio</a>
-<a href="#">Servicios</a>
-<a href="#">Precios</a>
-<a href="#">Contacto</a>
+<a href="#inicio">Inicio</a>
+<a href="#servicios">Servicios</a>
+<a href="#precios">Precios</a>
+<a href="#contacto">Contacto</a>
 </nav>
 
 <div class="logo">
@@ -104,88 +114,165 @@ margin-top:40px;
 
 </header>
 
-<section class="hero">
+<!-- INICIO -->
+
+<section class="hero" id="inicio">
 
 <h1>Pixel Forge</h1>
 
 <p>
-Desarrollo digital, páginas web modernas, automatización con inteligencia artificial
-y soluciones tecnológicas para negocios.
+Agencia de desarrollo digital especializada en la creación de páginas web
+modernas para negocios, emprendedores y proyectos personales.
 </p>
 
-<a class="boton" href="https://wa.me/528719593901">Contactar por WhatsApp</a>
+<p>
+Transformamos ideas en presencia digital profesional para ayudarte
+a conectar con más clientes y fortalecer tu marca.
+</p>
+
+<a class="boton" href="https://wa.me/528719593901">
+Contactar por WhatsApp
+</a>
 
 </section>
 
-<section class="section">
+<!-- SERVICIOS -->
+
+<section class="section" id="servicios">
 
 <h2>Servicios</h2>
+
+<p>
+Somos una agencia de creación de páginas web especializada en negocios
+pequeños, medianos y grandes, así como proyectos de uso personal.
+</p>
+
+<p>
+Fomentamos el crecimiento digital de tu empresa agregando conectividad
+con tus clientes y ofreciendo diseño profesional para brindar una
+experiencia única a cada visitante de tu sitio web.
+</p>
 
 <div class="servicios">
 
 <div class="card">
-<h3>Páginas Web</h3>
-<p>Diseño de páginas web modernas para negocios, emprendedores y marcas personales.</p>
-</div>
-
-<div class="card">
-<h3>Automatización con IA</h3>
-<p>Implementación de herramientas de inteligencia artificial para mejorar procesos.</p>
+<h3>Diseño de Páginas Web</h3>
+<p>
+Creación de páginas modernas, rápidas y optimizadas para mostrar tu negocio
+de forma profesional en internet.
+</p>
 </div>
 
 <div class="card">
 <h3>Landing Pages</h3>
-<p>Páginas enfocadas en ventas para promocionar productos o servicios.</p>
+<p>
+Páginas enfocadas en generar ventas o captar clientes potenciales
+para tus productos o servicios.
+</p>
 </div>
 
 <div class="card">
-<h3>Soporte Digital</h3>
-<p>Optimización y mantenimiento de páginas web.</p>
+<h3>Optimización Digital</h3>
+<p>
+Mejoramos el diseño y funcionamiento de tu página para que sea
+más rápida, atractiva y eficiente.
+</p>
+</div>
+
+<div class="card">
+<h3>Soporte y Actualización</h3>
+<p>
+Mantenimiento y mejoras constantes para que tu sitio web
+siempre funcione correctamente.
+</p>
 </div>
 
 </div>
 
 </section>
 
-<section class="section">
+<!-- PRECIOS -->
+
+<section class="section" id="precios">
 
 <h2>Precios</h2>
 
 <div class="servicios">
 
 <div class="card">
-<h3>Landing Page</h3>
-<p class="precio">$1,500 MXN</p>
-<p>Página sencilla para promoción de servicios o productos.</p>
+
+<h3>Página Web Comercial</h3>
+
+<p class="precio">$2,500 MXN</p>
+
+<p>
+Ideal para negocios pequeños que necesitan presencia en internet.
+Incluye página principal, información del negocio, contacto y
+botón de WhatsApp para ventas directas.
+</p>
+
 </div>
 
 <div class="card">
-<h3>Página Web Completa</h3>
-<p class="precio">$3,500 MXN</p>
-<p>Sitio web profesional con varias secciones.</p>
+
+<h3>Sitio Web Profesional</h3>
+
+<p class="precio">$5,500 MXN</p>
+
+<p>
+Página web más amplia con varias secciones o páginas internas.
+Contenido organizado inteligentemente para mejorar la experiencia
+del usuario y la presentación del negocio.
+</p>
+
 </div>
 
 <div class="card">
+
 <h3>Tienda Online</h3>
-<p class="precio">$6,000 MXN</p>
-<p>Venta de productos en internet con sistema de pagos.</p>
+
+<p class="precio">$9,000 MXN</p>
+
+<p>
+Página web tipo e-commerce con catálogo de productos,
+carrito de compras y distribución clara de productos
+para facilitar las ventas en línea.
+</p>
+
 </div>
 
 </div>
 
 </section>
 
-<section class="section">
+<!-- CONTACTO -->
+
+<section class="section" id="contacto">
 
 <h2>Contacto</h2>
 
 <p>
-Escríbeme para desarrollar tu proyecto digital.
+Si quieres desarrollar tu página web o mejorar tu presencia digital,
+puedes comunicarte directamente conmigo.
 </p>
 
 <a class="boton" href="https://wa.me/528719593901">
 Enviar WhatsApp
 </a>
+
+<div class="redes">
+
+<p>Redes sociales (próximamente):</p>
+
+<a href="#">Facebook</a>
+
+<a href="#">TikTok</a>
+
+</div>
+
+<p>
+WhatsApp: 871 959 3901
+</p>
 
 </section>
 
